@@ -1,0 +1,52 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"call_to_actions",
+  "thread_state":"new_thread",
+  "call_to_actions":[
+    {
+      "message":{
+        "text":"Welcome to HoroscopeBot!"
+      }
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/899730286816302/thread_settings?access_token=EAAIUIZB8fteEBAF15sBZC0VEFM8ANKgDId0ZAn25RCxVIZBcUeh9mipPZBJZAvmVv5jwRIbLcs7V8ThBDiBZBspkUdzMlM5gd30ZBL1hZCilxL3vlzBVtJvOAXYtZCAVRBOVR52X5bntXgxRzbZCwhHCRxk3F1Kbiz7HsZCvvhEQ1G9VmAZDZD"
+
+-----webhook activate-----
+curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=EAAIUIZB8fteEBAF15sBZC0VEFM8ANKgDId0ZAn25RCxVIZBcUeh9mipPZBJZAvmVv5jwRIbLcs7V8ThBDiBZBspkUdzMlM5gd30ZBL1hZCilxL3vlzBVtJvOAXYtZCAVRBOVR52X5bntXgxRzbZCwhHCRxk3F1Kbiz7HsZCvvhEQ1G9VmAZDZD"
+-----webhook activate end----
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"call_to_actions",
+  "thread_state":"new_thread",
+  "call_to_actions":[
+    {
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"Welcome to HoroscopeBot!",
+                "item_url":"",
+                "image_url":"https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpt1/v/t1.0-9/13221564_917840261671971_4996791857658067315_n.jpg?oh=203b2260e539cedfdba6e1d8dcdd4091&oe=57A2E28B&__gda__=1470716559_ea3a8f72851184e3e268f21c2c160b43",
+                "subtitle":"Want to know about your day ?.",
+                "buttons":[
+                  {
+                    "type":"web_url",
+                    "title":"View Website",
+                    "url":"https://www.facebook.com/HoroscopeBot-899730286816302/"
+                  },
+                  {
+                    "type":"postback",
+                    "title":"Start Chatting",
+                    "payload":"Capricorn"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/899730286816302/thread_settings?access_token=EAAIUIZB8fteEBAF15sBZC0VEFM8ANKgDId0ZAn25RCxVIZBcUeh9mipPZBJZAvmVv5jwRIbLcs7V8ThBDiBZBspkUdzMlM5gd30ZBL1hZCilxL3vlzBVtJvOAXYtZCAVRBOVR52X5bntXgxRzbZCwhHCRxk3F1Kbiz7HsZCvvhEQ1G9VmAZDZD"
